@@ -13,13 +13,13 @@ class Block{
     display(){
         var angle = this.body.angle;
 
-        if(this.body.speed < 5){
+        if(this.body.speed < 9){
             push();
             translate(this.body.position.x, this.body.position.y);
             rotate(angle);
 
-            imageMode(CENTER);
-            image(this.image, 0, 0, this.width, this.height);
+            rectMode(CENTER);
+            rect(0, 0, this.width, this.height);
             
             pop();
         }
@@ -29,9 +29,8 @@ class Block{
             push();
 
             this.Visiblity = this.Visiblity - 5;
-            tint(255, this.Visiblity);
-            image(this.image, this.body.position.x, this.body.position.y, 30, 30);
-            
+            fill (0, 255, 0, this.Visiblity);
+
             pop();
         }
     }
